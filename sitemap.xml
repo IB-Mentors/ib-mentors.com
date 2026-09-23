@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ib-mentors.com/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url><loc>https://ib-mentors.com/</loc></url>
+<url><loc>https://ib-mentors.com/teams</loc></url>
+<url><loc>https://ib-mentors.com/courses</loc></url>
+<url><loc>https://ib-mentors.com/blogs</loc></url>
+<url><loc>https://ib-mentors.com/faq</loc></url>
+<url><loc>https://ib-mentors.com/contact</loc></url>
+<url><loc>https://ib-mentors.com/become-mentor</loc></url>
+<url><loc>https://ib-mentors.com/teams/e-f</loc></url>
+<url><loc>https://ib-mentors.com/courses/ib-weekly-mentoring</loc></url>
+<url><loc>https://ib-mentors.com/courses/ib-study-plan-design</loc></url>
+<url><loc>https://ib-mentors.com/courses/ee-extended-essay-full-support</loc></url>
+<url><loc>https://ib-mentors.com/courses/ia-subject-complete</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ib-sogo-ten-wo-ageru-senryaku</loc></url>
+<url><loc>https://ib-mentors.com/blogs/tok-essay-a-hyoka-no-kotsu</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ee-theme-erabi-guide</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ib-math-aa-vs-ai-erabi-kata</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ib-ia-kotoken-kansei-tejun</loc></url>
+<url><loc>https://ib-mentors.com/blogs/cas-katudo-erabi-learning-outcomes</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ib-daigaku-shigan-score-katsuyo</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ib-shiken-chokuzen-taisaku-4weeks</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ib-hogo-sha-support-5steps</loc></url>
+<url><loc>https://ib-mentors.com/blogs/ib-mental-management-stress</loc></url>
 </urlset>

@@ -1,0 +1,158 @@
+# IB Mentors - automatic Framer export polling
+#
+# Polls the published Framer site on a schedule, re-runs the repo's own
+# export.sh, and pushes to main ONLY when the mirrored output actually changed.
+# A push to main is what makes the Vercel GitHub App build production, so this
+# is the path by which a Framer publish reaches ib-mentors.com unattended.
+#
+# Design notes:
+#   - No `push` trigger. This workflow commits to main, and a push trigger here
+#     would be directly self-recursive. Scheduled and manual only.
+#   - Pushes made with GITHUB_TOKEN do not start further workflow runs, so an
+#     auto-export commit cannot re-enter this workflow. It also means the
+#     vault-sync workflow does not run for auto-export commits, which is the
+#     behaviour we want: the vault should record human changes, not the poll.
+#   - concurrency with cancel-in-progress:false serialises overlapping ticks, so
+#     two runs never race on the same tree or push. A slow run delays the next
+#     tick rather than colliding with it.
+#   - The sanity floors below refuse to commit an export that came back
+#     catastrophically short (Framer unreachable, partial mirror, metadata
+#     pipeline silently no-op). They are floors, not equalities, so genuine
+#     content growth still flows through. As of 2026-09-23 the mirror is 23
+#     routes and 23 JSON-LD/canonical-bearing pages.
+#
+# Cadence and cost:
+#   This is a private repo, so every run bills Actions minutes (rounded up to a
+#   whole minute per job). A run takes roughly one minute, so */30 is about
+#   1,500 minutes a month. kelin.studio polls every 10 minutes; matching that
+#   here would be about 4,300 minutes a month on top of it. Change the cron
+#   below if a faster publish-to-live turnaround is worth that. Either way,
+#   "Run workflow" on the Actions tab publishes on demand in about a minute.
+
+name: Framer export poll
+
+on:
+  schedule:
+    # Every 30 minutes. GitHub runs scheduled workflows on a best-effort basis
+    # and may delay them under load, so treat 30m as the nominal floor.
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: framer-export-poll
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      MIN_ROUTES: '20'
+      MIN_CANONICAL: '20'
+      MIN_JSONLD: '18'
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0   # full history so a rebase-retry on push is possible
+
+      - name: Re-export from the published Framer site
+        timeout-minutes: 8
+        run: ./export.sh
+
+      - name: Sanity-check the export before trusting it
+        id: check
+        shell: bash
+        run: |
+          set -euo pipefail
+          mirror_html() {
+            find . -path ./.git -prune -o -path ./scripts -prune -o \
+                   -path ./.github -prune -o -path ./node_modules -prune -o \
+                   -name '*.html' -print
+          }
+          routes=$(find . -path ./.git -prune -o -path ./scripts -prune -o \
+                          -path ./.github -prune -o -path ./node_modules -prune -o \
+                          -name index.html -print | wc -l | tr -d ' ')
+          canonical=$(mirror_html | xargs grep -l '<link rel="canonical" href="https://ib-mentors.com' 2>/dev/null | wc -l | tr -d ' ')
+          jsonld=$(mirror_html | xargs grep -l 'id="ibm-jsonld"' 2>/dev/null | wc -l | tr -d ' ')
+          echo "routes=$routes  canonical=$canonical  jsonld=$jsonld"
+          { echo "routes=$routes"; echo "canonical=$canonical"; echo "jsonld=$jsonld"; } >> "$GITHUB_OUTPUT"
+          if [ "$routes" -lt "$MIN_ROUTES" ]; then
+            echo "::error::export produced $routes routes, below floor $MIN_ROUTES; refusing to commit"
+            exit 1
+          fi
+          if [ "$canonical" -lt "$MIN_CANONICAL" ]; then
+            echo "::error::only $canonical page(s) carry a live-domain canonical, below floor $MIN_CANONICAL; refusing to commit"
+            exit 1
+          fi
+          if [ "$jsonld" -lt "$MIN_JSONLD" ]; then
+            echo "::error::only $jsonld page(s) carry JSON-LD, below floor $MIN_JSONLD; refusing to commit"
+            exit 1
+          fi
+
+      - name: Commit and push only when the export really changed
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Author the auto-commit as a real, Vercel-linked contributor on this
+          # project. Vercel's gitForkProtection blocks production deployments
+          # whose commit author it cannot map to a project contributor, and the
+          # default "actions@users.noreply.github.com" bot identity is exactly
+          # that: the deploy is created and then blocked, and nothing reaches
+          # ib-mentors.com. kelin.studio hit this and it cost two silent days.
+          git config user.name  "Edward Zehua Zhang"
+          git config user.email "edward.zehua.zhang@gmail.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No export changes. Live site matches the mirror; nothing to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          changed=$(git diff --cached --name-only | wc -l | tr -d ' ')
+          echo "Changed files:"
+          git diff --cached --name-only | sed 's/^/  /'
+          git commit \
+            -m "chore: auto re-export from Framer ($changed file(s) changed)" \
+            -m "Automated by .github/workflows/framer-export.yml (run ${{ github.run_id }})."
+          # Another export or a human may have pushed between our checkout and
+          # now. Rebase and retry a bounded number of times; a real conflict
+          # fails loudly and the next scheduled tick redoes the work cleanly.
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              echo "committed=true" >> "$GITHUB_OUTPUT"
+              echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "push rejected, rebasing onto origin/main (attempt $attempt)"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::rebase conflict against origin/main; leaving it for the next tick"
+              exit 1
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "::error::push failed after 5 attempts"
+          exit 1
+
+      - name: Summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### Framer export poll"
+            echo ""
+            echo "| field | value |"
+            echo "| --- | --- |"
+            echo "| routes | ${{ steps.check.outputs.routes }} |"
+            echo "| canonical tags | ${{ steps.check.outputs.canonical }} |"
+            echo "| JSON-LD pages | ${{ steps.check.outputs.jsonld }} |"
+            echo "| committed | ${{ steps.commit.outputs.committed }} |"
+            echo "| new sha | ${{ steps.commit.outputs.sha }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
