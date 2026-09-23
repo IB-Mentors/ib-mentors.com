@@ -36,7 +36,7 @@ not-found responses.
 
 ## Re-exporting
 
-Automatic. `.github/workflows/framer-export.yml` polls the Framer site every 30
+Automatic. `.github/workflows/framer-export.yml` polls the Framer site every 10
 minutes, re-runs `export.sh`, and pushes to `main` **only when the mirrored
 output actually changed** — which is what triggers the Vercel production build.
 Publishing in Framer is therefore the whole workflow; nothing else is needed.

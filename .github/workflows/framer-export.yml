@@ -21,21 +21,20 @@
 #     content growth still flows through. As of 2026-09-23 the mirror is 23
 #     routes and 23 JSON-LD/canonical-bearing pages.
 #
-# Cadence and cost:
-#   This is a private repo, so every run bills Actions minutes (rounded up to a
-#   whole minute per job). A run takes roughly one minute, so */30 is about
-#   1,500 minutes a month. kelin.studio polls every 10 minutes; matching that
-#   here would be about 4,300 minutes a month on top of it. Change the cron
-#   below if a faster publish-to-live turnaround is worth that. Either way,
-#   "Run workflow" on the Actions tab publishes on demand in about a minute.
+# Cadence:
+#   This repo is public, so scheduled runs cost no Actions minutes, and the
+#   poll matches kelin.studio's 10 minutes. If it is ever made private again,
+#   a run takes about a minute, so this cadence would bill roughly 4,300
+#   minutes a month: drop it to */30 at that point. Either way, "Run workflow"
+#   on the Actions tab publishes on demand in about a minute.
 
 name: Framer export poll
 
 on:
   schedule:
-    # Every 30 minutes. GitHub runs scheduled workflows on a best-effort basis
-    # and may delay them under load, so treat 30m as the nominal floor.
-    - cron: '*/30 * * * *'
+    # Every 10 minutes. GitHub runs scheduled workflows on a best-effort basis
+    # and may delay them under load, so treat 10m as the nominal floor.
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:
