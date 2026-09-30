@@ -64,8 +64,9 @@ It does, in order:
    posts and courses mirror with the homepage title.
 3. **Mirror the styled `/404`** (it is not in the sitemap, so it is fetched
    explicitly) and the sitemap + `robots.txt`, domain-rewritten.
-4. **Inject measurement** (`scripts/inject-analytics.py`) and the **AdSense
-   loader** (`scripts/inject-adsense.py`) — Framer exports carry neither.
+4. **Inject measurement** (`scripts/inject-analytics.py`), the **AdSense
+   loader** (`scripts/inject-adsense.py`) and the **Cloudflare Web Analytics
+   beacon** (`scripts/inject-cf-beacon.py`): Framer exports carry none of them.
 5. **Remove Framer's branding badge** (`scripts/remove-framer-badge.py`).
 6. **Enforce the metadata convention** (below) — the durability hook — and
    **lock the title through hydration** (`scripts/lock-title.py`).
@@ -106,6 +107,14 @@ plus a re-export plus a deploy.
 AdSense is deliberately **not** a container tag: `adsbygoogle.js` is an
 ad-serving library, auto ads need it in `<head>` on first paint, and the AdSense
 reviewer reads raw HTML. Ownership verification is the checked-in `/ads.txt`.
+
+Cloudflare Web Analytics runs from `scripts/inject-cf-beacon.py`. The DNS
+record is grey-cloud (DNS-only) to Vercel, so Cloudflare cannot inject the
+beacon itself; the manual one is loaded by a small inline script that only
+fires on `ib-mentors.com`, so Vercel previews and local servers never report.
+It is cookieless, so there is no consent gate. There is no CSP on this site; if
+one is ever added it needs `https://static.cloudflareinsights.com` in
+`script-src` and `https://cloudflareinsights.com` in `connect-src`.
 
 ## The metadata convention
 

@@ -209,6 +209,12 @@ python3 scripts/inject-analytics.py
 #     Ownership verification is the checked-in /ads.txt, not this script.
 python3 scripts/inject-adsense.py
 
+# 4c2. Inject the Cloudflare Web Analytics beacon into every mirrored page.
+#      The DNS record is grey-cloud (DNS-only) to Vercel, so Cloudflare cannot
+#      inject it for us. The loader only fires on the production hostname, so
+#      Vercel previews and local servers never report as the live site.
+python3 scripts/inject-cf-beacon.py
+
 # 5. Remove Framer's exported branding badge from every mirrored page.
 find . "${PRUNE[@]}" -name '*.html' -exec python3 scripts/remove-framer-badge.py {} +
 
