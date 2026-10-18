@@ -218,6 +218,11 @@ python3 scripts/inject-cf-beacon.py
 # 5. Remove Framer's exported branding badge from every mirrored page.
 find . "${PRUNE[@]}" -name '*.html' -exec python3 scripts/remove-framer-badge.py {} +
 
+# 5b. Add the "Site by Kelin Studio" credit under the footer of every page.
+#     Injected just after Framer's #main closes, outside the hydrated React
+#     tree, so hydration can never strip it. Idempotent (marker comment).
+python3 scripts/inject-site-credit.py >/dev/null
+
 # ---------------------------------------------------------------------------
 # 6. Enforce the search/social metadata convention on every mirrored page.
 #    This is the durability hook: it runs on EVERY export, after mirroring, so

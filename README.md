@@ -68,6 +68,9 @@ It does, in order:
    loader** (`scripts/inject-adsense.py`) and the **Cloudflare Web Analytics
    beacon** (`scripts/inject-cf-beacon.py`): Framer exports carry none of them.
 5. **Remove Framer's branding badge** (`scripts/remove-framer-badge.py`).
+   Then **add the "Site by Kelin Studio" footer credit**
+   (`scripts/inject-site-credit.py`), placed just after Framer's `#main`
+   closes so the hydrated React tree never sees or strips it.
 6. **Enforce the metadata convention** (below) — the durability hook — and
    **lock the title through hydration** (`scripts/lock-title.py`).
 7. **Add JSON-LD** (`scripts/inject-jsonld.py`) and **regenerate `llms.txt`**
