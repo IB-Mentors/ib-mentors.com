@@ -1,21 +1,29 @@
 import { Page } from "@/components/shell/Page";
+import { HeroSection } from "./HeroSection";
+import { BrandSection } from "./BrandSection";
+import { CourseSection } from "./CourseSection";
+import { ProcessSection } from "./ProcessSection";
+import { TeamSection } from "./TeamSection";
+import { BentoSection } from "./BentoSection";
+import { CallToActionSection } from "./CallToActionSection";
+import { BlogsSection } from "./BlogsSection";
 
 /**
- * STUB (shell + home builder fills this in). Route /. Framer page module QWoqitfISDBm*.mjs (displayName `Home`): Hero, Brand, Course (CourseCard), Process (Process Card V1), Team (TeamCard), Bento (Bento List, Counter Card, Action Card), Call To Action, Blogs (Blog Card V1).
- * Sections, in order, each root carrying data-section="<Framer layer name>" for qa/compare.mjs:
- *   Hero Section / Brand Section / Course Section / Process Section / Team Section / Bento Section / Call To Action Section / Blogs Section
+ * Route /. Framer page module QWoqitfISDBm*.mjs (displayName `Home`): Hero, Brand, Course (CourseCard), Process
+ * (Process Card V1), Team (TeamCard), Bento (Bento List, Counter Card, Action Card), Call To Action, Blogs (Blog Card V1).
+ * Each section root carries data-section="<Framer layer name>" for qa/compare.mjs.
  */
 export function HomePage() {
   return (
     <Page>
-      <section data-section="Hero Section" />
-      <section data-section="Brand Section" />
-      <section data-section="Course Section" />
-      <section data-section="Process Section" />
-      <section data-section="Team Section" />
-      <section data-section="Bento Section" />
-      <section data-section="Call To Action Section" />
-      <section data-section="Blogs Section" />
+      <HeroSection />
+      <BrandSection />
+      <CourseSection />
+      <ProcessSection />
+      <TeamSection />
+      <BentoSection />
+      <CallToActionSection />
+      <BlogsSection />
     </Page>
   );
 }

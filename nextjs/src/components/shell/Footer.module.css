@@ -1,0 +1,482 @@
+/* Framer "Footer Section" (framer-jluztj) + component "Footer" (framer-tfvoD). Desktop rules first, then the
+   Tablet (framer-v-18wk9xl) and Phone (framer-v-yrxn6u) variant overrides as media queries. */
+.section {
+  height: min-content;
+  overflow: clip;
+  display: flex;
+  flex-flow: row;
+  flex: none;
+  order: 1002;
+  place-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.box {
+  flex: 1 0 0;
+  width: 1px;
+  height: auto;
+  position: relative;
+}
+.footer {
+  display: flex;
+  flex-flow: row;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 120px 30px 80px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, rgb(26, 69, 60));
+}
+.container {
+  display: flex;
+  flex-flow: row;
+  flex: 1 0 0;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 1px;
+  max-width: 1300px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.content {
+  display: flex;
+  flex-flow: column;
+  flex: 1 0 0;
+  place-content: center flex-start;
+  align-items: center;
+  gap: 192px;
+  width: 1px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.top {
+  height: min-content;
+  overflow: clip;
+  display: flex;
+  flex-flow: row;
+  flex: none;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 329px;
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.titleContact {
+  display: flex;
+  flex-flow: column;
+  flex: 1 0 0;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+  width: 1px;
+  max-width: 500px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+/* RichTextContainer */
+.rt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  outline: none;
+}
+.full {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.pre {
+  white-space: pre;
+  flex: none;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.auto {
+  flex: none;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.contactWrap {
+  display: flex;
+  flex-flow: column;
+  flex: none;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 26px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.emailLoc {
+  display: flex;
+  flex-flow: column;
+  flex: none;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.location {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: none;
+  width: 100%;
+  max-width: 55%;
+  height: auto;
+  position: relative;
+}
+.lnk {
+  color: var(--link-text-color);
+}
+.lnk:hover {
+  color: var(--link-hover-text-color);
+}
+
+/* Footer Button "Dekstop" (framer-GwaOj) */
+.fbtn {
+  cursor: pointer;
+  display: flex;
+  flex-flow: row;
+  place-content: center flex-start;
+  align-items: center;
+  gap: 5px;
+  width: min-content;
+  height: min-content;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+}
+.fbtn p {
+  color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, rgb(255, 255, 255));
+  transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.icon24 {
+  aspect-ratio: 1;
+  flex: none;
+  width: 24px;
+  height: auto;
+  position: relative;
+}
+.fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.contain,
+.cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center;
+  object-fit: contain;
+}
+.cover {
+  object-fit: cover;
+}
+
+.menu {
+  height: min-content;
+  overflow: clip;
+  display: flex;
+  flex-flow: row;
+  flex: 1 0 0;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 120px;
+  width: 1px;
+  padding: 0;
+  position: relative;
+}
+.menuCol {
+  height: min-content;
+  overflow: clip;
+  display: flex;
+  flex-flow: column;
+  flex: 1 0 0;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  width: 1px;
+  padding: 0;
+  position: relative;
+}
+.linkList {
+  display: flex;
+  flex-flow: column;
+  flex: none;
+  place-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+
+/* Footer pages Link (framer-j4gtl) */
+.pageLink {
+  cursor: pointer;
+  display: flex;
+  flex-flow: row;
+  place-content: center flex-start;
+  align-items: center;
+  gap: 10px;
+  width: min-content;
+  height: min-content;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+}
+.pageLink h5,
+.social h5 {
+  color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, rgb(255, 255, 255));
+  transition: color 0.3s cubic-bezier(0.44, 0, 0.56, 1);
+}
+
+/* Footer Social Link (framer-fcgST) */
+.socialBox {
+  flex: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.social {
+  cursor: pointer;
+  display: flex;
+  flex-flow: row;
+  place-content: center flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+}
+.mail {
+  display: flex;
+  flex-flow: row;
+  flex: none;
+  place-content: center flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+}
+
+@media (min-width: 1380px) {
+  .fbtn:hover p {
+    color: var(--token-6b7381ba-6de4-49e1-a897-8666d0895cc7, rgb(207, 117, 39));
+  }
+  .pageLink:hover h5,
+  .social:hover h5 {
+    color: var(--token-17474546-f0fd-442e-bce5-7d0f3321f71d, rgb(216, 128, 52));
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-flow: column;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.copyRow {
+  display: flex;
+  flex-flow: row;
+  flex: none;
+  place-content: center space-between;
+  align-items: center;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.copy {
+  white-space: pre;
+  flex: none;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.copy p {
+  color: var(--token-e29f80cc-7c19-42a6-a7c7-b923c17868bb, rgba(255, 255, 255, 0.7));
+}
+.images {
+  display: flex;
+  flex-flow: column;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1168px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.bg1,
+.bg2 {
+  display: flex;
+  flex-flow: row;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, rgb(26, 69, 60));
+}
+.bg2 {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  overflow: visible;
+}
+.bg2a {
+  top: 75px;
+}
+.bg2b {
+  top: 150px;
+}
+.strip {
+  display: block;
+  aspect-ratio: 5.407407407407407 / 1;
+  height: auto;
+  overflow: clip;
+  flex: 1 0 0;
+  width: 1px;
+  text-decoration: none;
+  position: relative;
+}
+
+/* ---------- Tablet */
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .footer {
+    padding: 80px 30px;
+  }
+  .content {
+    gap: 80px;
+  }
+  .top {
+    justify-content: center;
+    gap: 60px;
+  }
+  .titleContact,
+  .location,
+  .images {
+    max-width: unset;
+  }
+  .menu {
+    gap: unset;
+    justify-content: space-between;
+  }
+  .menuCol {
+    gap: 24px;
+  }
+  .socialBox {
+    width: auto;
+  }
+  .stripMid {
+    aspect-ratio: 5.404580152671755 / 1;
+  }
+  .bg2a {
+    top: 60px;
+  }
+  .bg2b {
+    top: 120px;
+  }
+}
+
+/* ---------- Phone */
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 60px 20px;
+  }
+  .content {
+    gap: 40px;
+  }
+  .top {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+  .titleContact {
+    flex: none;
+    gap: 40px;
+    width: 100%;
+  }
+  .menu {
+    gap: unset;
+    flex: none;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .menuCol {
+    gap: 20px;
+  }
+  .socialBox {
+    width: auto;
+  }
+  .copyRow {
+    flex-direction: column;
+  }
+  .copy {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+  .copy p {
+    text-align: center;
+  }
+  .bg2a {
+    top: 40px;
+  }
+  .bg2b {
+    top: 80px;
+  }
+}
+
+/* The Image Bg 2 appear effect only exists on the Desktop variant. */
+@media (max-width: 1379.98px) {
+  .bg2 {
+    opacity: 1 !important;
+    transform: translateX(-50%) !important;
+  }
+}
