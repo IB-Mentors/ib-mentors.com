@@ -1,0 +1,666 @@
+/* /courses/<slug> "Details Section" (framer-4BXy6). Class comments name the Framer hash. */
+.section { /* i5nlz4 */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 120px 30px;
+  overflow: clip;
+}
+.container { /* igz5ti */
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 1px;
+  max-width: 1300px;
+  height: min-content;
+  padding: 0;
+}
+.content { /* hmp7nt */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 80px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.wrapper { /* apecc3 */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  border-radius: 10px;
+}
+.left { /* lwf4xz */
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 1px;
+  max-width: 870px;
+  height: min-content;
+  padding: 0;
+}
+.textCard { /* fo4lqg */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+  width: 100%;
+  height: min-content;
+  padding: 30px;
+  overflow: hidden;
+  background-color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, #fff);
+  border-radius: 10px;
+  will-change: transform;
+}
+.block { /* 1v34kkt, gg9jxr */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  overflow: hidden;
+}
+.boxed { /* 1iywfuj: 1px #d2cec5 border drawn inside the box (Framer data-border :after) */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  width: 100%;
+  height: min-content;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  will-change: transform;
+}
+.boxed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--token-1286fb0c-fdd3-4b46-bcee-b5d98b6bb7ac, #d2cec5);
+  border-radius: inherit;
+  pointer-events: none;
+}
+.row02 { /* 1tlubmf */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.cols { /* 7e6s4d */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 60px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.col { /* 2s0vqr, 1yfma9w */
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 1px;
+  height: min-content;
+  padding: 0;
+}
+.col03 {
+  overflow: hidden;
+}
+
+/* Framer RichTextContainer */
+.rt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  height: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.full {
+  flex: none;
+  width: 100%;
+}
+.grow {
+  flex: 1 0 0;
+  width: 1px;
+}
+.pre {
+  flex: none;
+  width: auto;
+  white-space: pre;
+}
+
+/* Framer rich text (.framer-text rules) */
+.rich ul {
+  position: relative;
+  padding-inline-start: 0;
+  list-style: none;
+}
+.rich li {
+  position: relative;
+  padding-inline-start: 2ch;
+  list-style: none;
+  counter-increment: list-item;
+}
+.rich ul > li::before {
+  content: "•";
+  position: absolute;
+  inset-inline-start: 0;
+}
+
+/* text colours over the presets */
+.mentor .orange,
+.cards .orange {
+  color: var(--token-6b7381ba-6de4-49e1-a897-8666d0895cc7, #cf7527);
+  text-align: left;
+}
+.mentor .white,
+.cards .white {
+  color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, #fff);
+  text-align: left;
+}
+.mentor .white70,
+.cards .white70 {
+  color: var(--token-e29f80cc-7c19-42a6-a7c7-b923c17868bb, rgba(255, 255, 255, 0.7));
+  text-align: left;
+}
+
+/* " Detils Wrapper" (1baldku) */
+.mentor {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+  height: min-content;
+  padding: 30px;
+  overflow: hidden;
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+  border-radius: 10px;
+  will-change: transform;
+}
+.photo { /* 1a1fqt8 */
+  position: relative;
+  flex: none;
+  width: 300px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  will-change: transform;
+}
+.photo img,
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.photo img {
+  object-position: center;
+  object-fit: cover;
+}
+/* Framer's empty-image placeholder (an image field with no value) */
+.placeholder {
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 64px auto;
+  background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22126%22 height=%22126%22><path id=%22a%22 d=%22M126 0v21.584L21.584 126H0v-17.585L108.415 0H126Zm0 108.414V126h-17.586L126 108.414Zm0-84v39.171L63.585 126H24.414L126 24.414Zm0 42v39.17L105.584 126h-39.17L126 66.414ZM105.586 0 0 105.586V66.415L66.415 0h39.171Zm-42 0L0 63.586V24.415L24.415 0h39.171Zm-42 0L0 21.586V0h21.586Z%22 fill=%22rgb(136, 136, 136, 0.2)%22 fill-rule=%22evenodd%22/></svg>');
+}
+.mentorText { /* 1euim67 */
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 1px;
+  height: min-content;
+  padding: 0;
+  overflow: clip;
+}
+.col15 { /* dd7m58 */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 100%;
+  height: min-content;
+}
+.col10 { /* rm3qmh */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+}
+.stars { /* 1unq6a4 */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+}
+.starRow { /* Star Icon "5 Star" (framer-C01UE 1iy54lr) */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1px;
+  width: min-content;
+  height: min-content;
+}
+.star {
+  position: relative;
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+.star img,
+.infoIcon img,
+.ovIcon img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+
+/* " Card Wrapper" (an6aw5): sticky on desktop */
+.cards {
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 1px;
+  max-width: 400px;
+  height: min-content;
+  padding: 0;
+  overflow: clip;
+}
+.card01,
+.card02 {
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 25px;
+  width: 100%;
+  height: min-content;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  will-change: transform;
+}
+.card01 { /* 1yljp7g */
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+}
+.card02 { /* 1yhuc4z */
+  gap: 30px;
+  background-color: var(--token-c3255d5e-8803-4307-aa11-957eacb5776a, #853e00);
+}
+.priceTitle { /* xzp3fr */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+  width: 100%;
+  height: min-content;
+}
+.infoList { /* bkzlk */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  overflow: clip;
+}
+.infoItem {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: auto;
+}
+.infoRow { /* Course Information List "List V1" (framer-yMlFA 6bf1eu) */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+  height: min-content;
+  padding: 0 0 10px;
+}
+.infoRow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: var(--token-a2fd6660-feec-4d6f-bc88-383e4e27be19, rgba(255, 255, 255, 0.14));
+  border-width: 0 0 1px 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.iconText {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  width: min-content;
+  height: min-content;
+}
+.infoIcon {
+  position: relative;
+  flex: none;
+  width: 16px;
+  height: 13px;
+}
+.overview { /* gpakhr */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px;
+  width: 100%;
+  height: min-content;
+  padding: 30px;
+  overflow: hidden;
+  background-color: var(--token-21058ac8-808e-472a-990f-dce5d74c7481, #914809);
+  border-radius: 10px;
+  will-change: transform;
+}
+.line { /* 1s3f9oh */
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--token-9ea37562-989d-4afe-97cd-a1b46227c3df, rgba(255, 255, 255, 0.2));
+}
+.ovRow { /* Courses Details List "List" (framer-T0JAP ewb3ws) */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+}
+.ovIcon {
+  position: relative;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .section {
+    padding: 40px 30px 80px;
+  }
+  .content {
+    gap: 50px;
+  }
+  .wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .left {
+    flex: none;
+    width: 100%;
+    max-width: unset;
+  }
+  .textCard {
+    padding: 25px;
+  }
+  .block {
+    gap: 5px;
+  }
+  .boxed {
+    gap: 30px;
+    padding: 20px;
+  }
+  .cols {
+    gap: 30px;
+  }
+  .photo {
+    order: 0;
+    flex: 1 0 0;
+    width: 1px;
+    aspect-ratio: 1.08;
+  }
+  .photo img {
+    object-position: center top;
+  }
+  .mentorText {
+    order: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .cards {
+    position: relative;
+    top: unset;
+    flex: none;
+    flex-direction: row;
+    width: 100%;
+    max-width: unset;
+  }
+  .card01 {
+    position: relative;
+    top: unset;
+    flex: 1 0 0;
+    gap: 20px;
+    width: 1px;
+    min-height: 430px;
+    padding: 20px;
+  }
+  .card02 {
+    position: relative;
+    top: unset;
+    flex: 1 0 0;
+    gap: 29px;
+    width: 1px;
+    min-height: 430px;
+    padding: 20px;
+  }
+  .overview {
+    gap: 15px;
+    padding: 10px;
+  }
+}
+@media (max-width: 767.98px) {
+  .section {
+    padding: 30px 20px 60px;
+  }
+  .content {
+    gap: 40px;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .left {
+    flex: none;
+    width: 100%;
+    max-width: unset;
+  }
+  .textCard {
+    gap: 40px;
+    padding: 20px;
+  }
+  .block {
+    gap: 3px;
+  }
+  .boxed {
+    gap: 20px;
+    padding: 16px;
+  }
+  .cols {
+    flex-direction: column;
+    gap: 0;
+  }
+  .col {
+    flex: none;
+    width: 100%;
+  }
+  .mentor {
+    flex-direction: column;
+    gap: 35px;
+    padding: 20px;
+  }
+  .photo {
+    width: 100%;
+  }
+  .photo img {
+    object-position: center top;
+  }
+  .mentorText {
+    flex: none;
+    gap: 20px;
+    width: 100%;
+  }
+  .cards {
+    position: relative;
+    top: unset;
+    flex: none;
+    gap: 20px;
+    width: 100%;
+    max-width: unset;
+  }
+  .card01,
+  .card02 {
+    position: relative;
+    top: unset;
+    gap: 20px;
+    padding: 20px;
+  }
+  .overview {
+    gap: 10px;
+    padding: 10px;
+  }
+}

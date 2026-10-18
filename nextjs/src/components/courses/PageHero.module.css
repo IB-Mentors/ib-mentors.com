@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 204px 30px 180px;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 1px;
+  max-width: 1300px;
+  height: min-content;
+  padding: 0;
+}
+.content {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.titleWrap {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 555px;
+  height: min-content;
+  padding: 0;
+}
+.titleWrap.detail {
+  max-width: 800px;
+}
+.rt {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.detail .desc {
+  max-width: 575px;
+}
+.titleWrap .title {
+  text-align: center;
+  color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+}
+.titleWrap .descText {
+  text-align: center;
+  color: var(--token-c7693201-4213-426e-a6de-0fbb44d0f402, #444);
+}
+
+.line {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  z-index: 1;
+  flex: none;
+  width: 100%;
+  aspect-ratio: 21.5625;
+  overflow: hidden;
+  transform: translateX(-50%);
+  will-change: filter;
+}
+.line img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .hero {
+    padding: 150px 30px 130px;
+  }
+  .content {
+    gap: 50px;
+  }
+  .titleWrap {
+    gap: 25px;
+  }
+  .titleWrap.detail {
+    max-width: 750px;
+  }
+  .line {
+    bottom: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 140px 20px 90px;
+  }
+  .content {
+    gap: 40px;
+  }
+  .titleWrap {
+    gap: 20px;
+  }
+  .titleWrap.detail {
+    max-width: 400px;
+  }
+  .line {
+    bottom: 30px;
+  }
+}

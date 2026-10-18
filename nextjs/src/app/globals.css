@@ -1,0 +1,80 @@
+@import "./tokens.css";
+@import "./fonts.css";
+@import "./presets.css";
+
+/* Base reset, from Framer's own page CSS (html,body,#main{box-sizing:border-box;margin:0;padding:0} ... h1..figure{margin:0}). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Instrument Sans OpenType features every Framer preset carries. */
+  --ffs: "blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;
+}
+body {
+  /* Framer page background (the body/#main colour on every route). */
+  background: var(--token-e8209ae6-7d7a-457f-96da-089d6aa7b848, #f4f1ea);
+}
+body,
+input,
+textarea,
+select,
+button {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea,
+select {
+  color: inherit;
+}
+img,
+svg,
+video {
+  display: block;
+}
+
+/* Breakpoint visibility helpers (Framer's hidden-<id> classes).
+   THIS SITE'S breakpoints (not Framer's 1200/810 default):
+   desktop >= 1380px, tablet 768..1379.98px, phone <= 767.98px */
+@media (min-width: 1380px) {
+  .hide-desktop { display: none !important; }
+}
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .hide-tablet { display: none !important; }
+}
+@media (max-width: 767.98px) {
+  .hide-phone { display: none !important; }
+}
+
+/* The page frame Framer wraps every route in. */
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: clip;
+}

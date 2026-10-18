@@ -1,0 +1,326 @@
+/* /teams/<slug> (framer-v23Zu). */
+.hero { /* 19x10y4 */
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 242px;
+  padding: 0 30px;
+  overflow: hidden;
+}
+.section { /* 1esm4gd */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 120px 30px;
+  overflow: clip;
+}
+.container { /* 1mxrptq */
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 1px;
+  max-width: 1300px;
+  height: min-content;
+  padding: 0;
+}
+.content { /* edcx2y */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 80px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.wrapper { /* 1f3exho */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.details { /* 1d7twue: the page's sticky element */
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 1px;
+  max-width: 414px;
+  height: min-content;
+  padding: 30px;
+  overflow: hidden;
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+  border-radius: 10px;
+  will-change: transform;
+}
+.photo { /* 1lnyn5r */
+  position: relative;
+  flex: none;
+  width: 100%;
+  aspect-ratio: 0.997183;
+  overflow: hidden;
+  border-radius: 10px;
+  will-change: transform;
+}
+.photo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center top;
+  object-fit: cover;
+}
+.text { /* p7dlys */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 354px;
+  height: min-content;
+  padding: 0;
+  overflow: clip;
+}
+.col15 {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 100%;
+  height: min-content;
+}
+.col10 {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+}
+.rt {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.details .orange {
+  text-align: left;
+  color: var(--token-6b7381ba-6de4-49e1-a897-8666d0895cc7, #cf7527);
+}
+.details .white {
+  text-align: left;
+  color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, #fff);
+}
+.details .white70 {
+  text-align: left;
+  color: var(--token-e29f80cc-7c19-42a6-a7c7-b923c17868bb, rgba(255, 255, 255, 0.7));
+}
+.socials { /* imj605 */
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+}
+.socialBox {
+  position: relative;
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+/* "Team Social Icon" (framer-h94fz) */
+.social {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: var(--token-c3e1f061-5688-400b-884e-b0b2cacf3b25, #0a226b);
+  border-radius: 6px;
+  will-change: transform;
+}
+.v1 {
+  cursor: pointer;
+  transition: background-color 0.4s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.v1:hover {
+  background-color: var(--token-6b7381ba-6de4-49e1-a897-8666d0895cc7, #cf7527);
+}
+.v2 {
+  cursor: unset;
+}
+.socialIcon {
+  position: relative;
+  flex: none;
+  width: 18px;
+  height: 13px;
+}
+.socialIcon img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+.grid { /* mbq4jf */
+  position: relative;
+  display: grid;
+  flex: 1 0 0;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  grid-auto-rows: min-content;
+  justify-content: center;
+  gap: 30px;
+  width: 1px;
+  max-width: 856px;
+  height: min-content;
+  padding: 0;
+}
+.item {
+  position: relative;
+  flex: none;
+  place-self: start;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .hero {
+    height: 223px;
+  }
+  .section {
+    padding: 40px 30px 80px;
+  }
+  .content {
+    gap: 50px;
+  }
+  .wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .details {
+    position: relative;
+    top: unset;
+    flex: none;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    max-width: unset;
+  }
+  .photo {
+    width: 40%;
+  }
+  .text {
+    flex: 1 0 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1px;
+    max-width: 500px;
+  }
+  .grid {
+    flex: none;
+    gap: 20px;
+    width: 100%;
+    max-width: unset;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero {
+    height: 171px;
+    padding: 0 20px;
+  }
+  .section {
+    padding: 30px 20px 60px;
+  }
+  .content {
+    gap: 40px;
+  }
+  .wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .details {
+    position: relative;
+    top: unset;
+    flex: none;
+    gap: 35px;
+    width: 100%;
+    max-width: unset;
+    padding: 19px;
+  }
+  .grid {
+    flex: none;
+    grid-template-columns: repeat(1, minmax(50px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: unset;
+  }
+}

@@ -1,0 +1,154 @@
+/* Framer "Hero Button" (framer-AKvSF). Base = Hero Button V1 (framer-v-1d4matu). */
+.btn {
+  cursor: pointer;
+  will-change: transform;
+  display: flex;
+  flex-flow: row;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 14px;
+  width: min-content;
+  height: min-content;
+  padding: 10px 10px 10px 26px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, rgb(26, 69, 60));
+}
+.heroV1 {
+}
+.heroV2 {
+  cursor: unset;
+}
+.tertV1 {
+  gap: unset;
+  justify-content: space-between;
+  width: 170px;
+}
+.tertV2 {
+  cursor: unset;
+  gap: unset;
+  justify-content: space-between;
+  width: 170px;
+}
+.quat {
+  gap: 0;
+  padding: 16px 26px;
+}
+.quinV1,
+.quinV2 {
+  gap: unset;
+  justify-content: space-between;
+  width: 170px;
+  background-color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, rgb(255, 255, 255));
+}
+.quinV2 {
+  cursor: unset;
+}
+
+/* Title Wrapper (framer-14uzbs6) */
+.titles {
+  display: flex;
+  flex-flow: column;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: min-content;
+  height: min-content;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  outline: none;
+  white-space: pre;
+  flex: none;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.title p {
+  color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, rgb(255, 255, 255));
+}
+.quinV1 .title p,
+.quinV2 .title p {
+  color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, rgb(26, 69, 60));
+}
+
+/* Icon Wrapper (framer-tw7fyb) */
+.iconWrap {
+  aspect-ratio: 1;
+  display: flex;
+  flex-flow: row;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 34px;
+  height: auto;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  border-radius: 100px;
+  background-color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, rgb(255, 255, 255));
+}
+.quinV1 .iconWrap,
+.quinV2 .iconWrap {
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, rgb(26, 69, 60));
+}
+.icon {
+  aspect-ratio: 1.0769230769230769 / 1;
+  flex: none;
+  width: 14px;
+  height: auto;
+  position: relative;
+  overflow: visible;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Swipe (V1 + Quaternary). Framer swaps absolute/relative positions on hover and animates the layout change:
+ *  Title 1 sits at top:-50px left:49% translateX(-50%) and moves into place; Title 2 moves to bottom:-50px left:49%.
+ *  Icon 1 sits at left:-30px and moves into the centre; Icon 2 moves to right:-30px. Same motion with transforms. */
+.titleIn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translate(-1%, -50px);
+}
+.icon.iconIn {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -6.5px;
+  z-index: 1;
+  transform: translateX(-40px);
+}
+.swipe .titleIn,
+.swipe .titleOut,
+.swipe .iconIn,
+.swipe .iconOut {
+  transition: transform 0.4s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.swipe:hover .titleIn,
+.swipe:hover .iconIn {
+  transform: none;
+}
+.swipe:hover .titleOut {
+  transform: translate(-1%, 50px);
+}
+.quinV1:hover .titleOut {
+  transform: translate(0, 50px);
+}
+.swipe:hover .iconOut {
+  transform: translateX(40px);
+}

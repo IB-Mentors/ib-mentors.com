@@ -1,0 +1,27 @@
+/* Framer colour tokens (body{} rule of the published site). Names are Framer token ids, so
+   var(--token-<id>, <fallback>) from the Framer CSS can be pasted as-is. */
+:root {
+  --token-e8209ae6-7d7a-457f-96da-089d6aa7b848: #f4f1ea;
+  --token-c7693201-4213-426e-a6de-0fbb44d0f402: #444;
+  --token-6b473f40-d402-4f26-bd3f-91ef2d38048d: #e9e5dd;
+  --token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9: #fff;
+  --token-080e1a25-cec7-42ff-8f40-b5b92f071114: #0a226b;
+  --token-6b7381ba-6de4-49e1-a897-8666d0895cc7: #cf7527;
+  --token-1286fb0c-fdd3-4b46-bcee-b5d98b6bb7ac: #d2cec5;
+  --token-e29f80cc-7c19-42a6-a7c7-b923c17868bb: #ffffffb3;
+  --token-9ea37562-989d-4afe-97cd-a1b46227c3df: #fff3;
+  --token-8cb005ee-0f57-4759-8b13-62c9505b2eff: #ffffff03;
+  --token-c3e1f061-5688-400b-884e-b0b2cacf3b25: #0a226b;
+  --token-cc3fc405-587e-4aef-89f9-b1d504959e2d: #44444480;
+  --token-a2fd6660-feec-4d6f-bc88-383e4e27be19: #ffffff24;
+  --token-61fbc6ee-9369-4e45-a8d6-1efc24900302: #ffffff0f;
+  --token-17474546-f0fd-442e-bce5-7d0f3321f71d: #d88034;
+  --token-c7ef8dad-d4d1-4208-9575-8a58edab351f: #f4f1ea;
+  --token-d177d039-4ab9-4c44-8f18-7710c2f5dcc3: #e9e5dd4d;
+  --token-c3255d5e-8803-4307-aa11-957eacb5776a: #853e00;
+  --token-21058ac8-808e-472a-990f-dce5d74c7481: #914809;
+  --token-a8877166-f15f-4c25-95e0-7da3a66f10fc: #181d27;
+  --token-ce5be3a6-3939-4290-8fba-d2eff544769a: #1e6aff;
+  --token-6d0c88d6-fa84-4c6f-a7c3-fa429ac81ce3: #fdbc0d;
+  --token-37b9c566-68b9-4510-88d7-01196f9f19cf: #3b3b3b;
+}
