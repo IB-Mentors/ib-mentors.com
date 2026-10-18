@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { SITE_URL } from "@/lib/site";
 import { MeasurementBodyStart, MeasurementHead } from "@/components/measurement/MeasurementTags";
 import { MeasurementListener } from "@/components/measurement/MeasurementListener";
 
+// No metadataBase: every URL pageMetadata() emits is already absolute, and with a metadataBase Next rewrites the home
+// canonical / og:url "https://ib-mentors.com/" to "https://ib-mentors.com" (no slash), unlike the mirror.
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
   icons: {
     icon: [
       { url: "/framer/3kpYpmd2XUV96ggNPJBbPXOXuQ.png", media: "(prefers-color-scheme: light)" },

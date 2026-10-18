@@ -2,7 +2,8 @@
    Same house pattern as oglabs.io (Fruition-Service/oglabs-website-monorepo/nextjs/src/lib/measurement.ts).
 
    What production (the static mirror, scripts/inject-*.py) carries today, and where it lives here:
-   - GA4 G-13MKYG4YL9, loaded directly with gtag.js (inject-analytics.py, GTM_ID empty).    -> GA4_MEASUREMENT_ID
+   - GA4 G-13MKYG4YL9, loaded directly with gtag.js (inject-analytics.py).                 -> GA4_MEASUREMENT_ID
+   - GTM-PBHMLWMQ: not in the mirror. Loaded here, empty (see GTM_CONTAINER_ID).           -> GTM_CONTAINER_ID
    - AdSense ca-pub-8631844190242419 in <head> on every page (inject-adsense.py). Not a
      measurement tag and not host-gated: the AdSense reviewer reads raw HTML.                -> ADSENSE_CLIENT
    - Cloudflare Web Analytics beacon, production hosts only (inject-cf-beacon.py).          -> CF_WEB_ANALYTICS_TOKEN
@@ -18,11 +19,14 @@
 
 export const MEASURED_HOSTS = ["ib-mentors.com", "www.ib-mentors.com"];
 
-/* Empty, as on production today (scripts/inject-analytics.py). A container for this site,
-   GTM-PBHMLWMQ, exists in the "Kelin Studio" GTM account (edward.zhang@kelin.studio, created
-   10 Sep 2026) but has never been wired in or published; the repo README asks for a container
-   under an IB Mentors account. Decide which before setting it. */
-export const GTM_CONTAINER_ID = "";
+/* The site's own container in the "Kelin Studio" GTM account (edward.zhang@kelin.studio, created
+   10 Sep 2026; not Kelin's GTM-NMR9PNN9, so nothing of Kelin's fires here). Checked 18 Oct 2026:
+   gtm.js?id=GTM-PBHMLWMQ answers 200 with published version 1, which holds no tags, triggers or
+   variables beyond the built-ins. So it is loaded (on MEASURED_HOSTS only), and a tag added in GTM
+   later goes live with a publish, no deploy. GA4 stays direct (GTAG_INIT below) because the
+   container does not fire G-13MKYG4YL9. If a GA4 Google tag for G-13MKYG4YL9 is ever added to the
+   container, empty GA4_MEASUREMENT_ID in the same change, or every page_view counts twice. */
+export const GTM_CONTAINER_ID = "GTM-PBHMLWMQ";
 
 /* GA4 property for ib-mentors.com (personal "Edward" GA4 account per the Google estate audit). */
 export const GA4_MEASUREMENT_ID = "G-13MKYG4YL9";
@@ -75,10 +79,10 @@ export const MEASUREMENT_GUARD = `(function(){
 })();`;
 
 export const GTM_LOADER = GTM_CONTAINER_ID
-  ? `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');`
+  ? `if (window.__msMeasure) (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');`
   : "";
 
-/* send_page_view stays on: nothing else sends the page_view. Enhanced measurement reports App
+/* send_page_view stays on: nothing else sends the page_view (the GTM container has no GA4 tag). Enhanced measurement reports App
    Router navigations itself; a manual page_view on route change would double them. */
 export const GTAG_INIT = `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -117,7 +121,7 @@ const CLICK_ID_SOURCE: Record<(typeof CLICK_IDS)[number], string> = {
   msclkid: "microsoft", ttclid: "tiktok", rdt_cid: "reddit",
 };
 
-type Touch = { source: string; medium: string; campaign?: string; click_id?: string; landing: string; at: string };
+type Touch = { source: string; medium: string; campaign?: string; term?: string; content?: string; click_id?: string; landing: string; at: string };
 type Attribution = { first?: Touch; last?: Touch };
 
 function readAttribution(): Attribution {
@@ -158,6 +162,8 @@ export function captureAttribution() {
     }
     const touch: Touch = {
       source, medium, campaign,
+      term: p.get("utm_term") || undefined,
+      content: p.get("utm_content") || undefined,
       click_id: id ? `${id}:${p.get(id)}` : undefined,
       landing: window.location.pathname,
       at: new Date().toISOString(),
@@ -169,14 +175,21 @@ export function captureAttribution() {
   }
 }
 
-/** The paid click behind this visit, if any, as flat parameters (GA4 events and lead payloads). */
+/** The click and campaign behind this visit as flat parameters, for GA4 events and lead payloads:
+    click_id ("gclid:..."), ad_source / first_source ("google / cpc"), the last touch's utm_campaign,
+    utm_term, utm_content and landing page, and the first touch's landing page. */
 export function attributionParams(): Record<string, string> {
   if (typeof window === "undefined") return {};
   const { first, last } = readAttribution();
   const out: Record<string, string> = {};
   if (last?.click_id) out.click_id = last.click_id.slice(0, 100);
   if (last) out.ad_source = `${last.source} / ${last.medium}`;
+  if (last?.campaign) out.utm_campaign = last.campaign.slice(0, 100);
+  if (last?.term) out.utm_term = last.term.slice(0, 100);
+  if (last?.content) out.utm_content = last.content.slice(0, 100);
+  if (last?.landing) out.landing_page = last.landing.slice(0, 100);
   if (first) out.first_source = `${first.source} / ${first.medium}`;
+  if (first?.landing) out.first_landing_page = first.landing.slice(0, 100);
   return out;
 }
 
