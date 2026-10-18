@@ -6,7 +6,7 @@ export type BlogPost = {
   /** As Framer prints it: 2025/02/15 */
   date: string;
   category: string;
-  /** Card byline ("I.H 講師"); null when the post is not among the cards Framer server-renders on /blogs. */
+  /** Card byline ("I.H 講師"); for the cards Framer only renders after もっと見る it is LIVE_BYLINES in qa/extract-content.py. */
   author: string | null;
   image: { src: string; alt: string } | null;
   cardImage: { src: string; alt: string } | null;
@@ -115,7 +115,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "IB学生が知るべき大学出願のリアル―IBスコアを最大限に活かす方法",
     "date": "2025/04/15",
     "category": "大学出願",
-    "author": null,
+    "author": "Y.Y 講師",
     "image": {
       "src": "/framer/EKmZT0JTNorCBk4QJGQi5Ftos.jpg",
       "alt": ""
@@ -128,7 +128,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "IB試験直前の最強対策―残り4週間で得点を最大化する方法",
     "date": "2025/05/01",
     "category": "試験対策",
-    "author": null,
+    "author": "I.S 講師",
     "image": {
       "src": "/framer/ozYMOlEz9WllnEddMd1xQ6OWEwI.png",
       "alt": ""
@@ -141,7 +141,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "IB保護者の径―お子さまのIB状況を理解し、適切にサポートするための5ステップ",
     "date": "2025/05/15",
     "category": "保護者向け",
-    "author": null,
+    "author": "E.F 講師",
     "image": {
       "src": "/framer/Iq1qZBpvVPQfQvm4S8zPJ5VP1GI.jpg",
       "alt": ""
@@ -154,7 +154,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "IB生のメンタル管理―ストレスと上手に付き合いながらIBを乗り越える方法",
     "date": "2025/06/01",
     "category": "メンタル",
-    "author": null,
+    "author": "N.K 講師",
     "image": {
       "src": "/framer/AEwQdR4UkjPpnxP8nj7aosUtg.png",
       "alt": ""

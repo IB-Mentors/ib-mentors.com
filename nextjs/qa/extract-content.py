@@ -39,6 +39,13 @@ for t, a, s, e in find(isp, "Desktop Blog Card "):
     if not href or href.group(1) in cards: continue
     p = pieces(idx, s, e)
     cards[href.group(1)] = {"category": p[0], "title": p[1], "date": p[2], "author": p[3] if len(p) > 3 else None, "image": first_img(idx, s, e)}
+# Bylines of the cards Framer only renders after もっと見る on /blogs (not in the SSR HTML), read from the live page.
+LIVE_BYLINES = {
+    "ib-daigaku-shigan-score-katsuyo": "Y.Y 講師",
+    "ib-shiken-chokuzen-taisaku-4weeks": "I.S 講師",
+    "ib-hogo-sha-support-5steps": "E.F 講師",
+    "ib-mental-management-stress": "N.K 講師",
+}
 posts = []
 for slug in blog_slugs:
     h = read(f"blogs/{slug}"); sp = parse(h)
@@ -51,14 +58,14 @@ for slug in blog_slugs:
     card = cards.get(slug, {})
     posts.append({
         "slug": slug, "title": title, "date": date, "category": cat,
-        "author": card.get("author"),
+        "author": card.get("author") or LIVE_BYLINES.get(slug),
         "image": first_img(h, iw[2], iw[3]) if iw else card.get("image"),
         "cardImage": card.get("image"),
         "html": clean_rich(h[c[2]:c[3]]) if c else "",
     })
 posts.sort(key=lambda p: p["date"])
 open("src/content/blogs.ts", "w").write(ts("BLOG_POSTS",
-    "export type BlogPost = {\n  slug: string;\n  title: string;\n  /** As Framer prints it: 2025/02/15 */\n  date: string;\n  category: string;\n  /** Card byline (\"I.H 講師\"); null when the post is not among the cards Framer server-renders on /blogs. */\n  author: string | null;\n  image: { src: string; alt: string } | null;\n  cardImage: { src: string; alt: string } | null;\n  /** Rich text body (Framer classes stripped): h2/h3/p/ul/ol/li/strong/a/img. */\n  html: string;\n};",
+    "export type BlogPost = {\n  slug: string;\n  title: string;\n  /** As Framer prints it: 2025/02/15 */\n  date: string;\n  category: string;\n  /** Card byline (\"I.H 講師\"); for the cards Framer only renders after もっと見る it is LIVE_BYLINES in qa/extract-content.py. */\n  author: string | null;\n  image: { src: string; alt: string } | null;\n  cardImage: { src: string; alt: string } | null;\n  /** Rich text body (Framer classes stripped): h2/h3/p/ul/ol/li/strong/a/img. */\n  html: string;\n};",
     posts, "Blog posts (Framer CMS collection behind /blogs and /blogs/<slug>), oldest first, as /blogs orders them.").replace("export const BLOG_POSTS =", "export const BLOG_POSTS: BlogPost[] =")
     + "\nexport function getPost(slug: string): BlogPost | undefined {\n  return BLOG_POSTS.find((p) => p.slug === slug);\n}\n")
 
