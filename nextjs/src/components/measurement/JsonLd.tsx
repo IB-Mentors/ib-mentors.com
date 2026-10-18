@@ -5,7 +5,8 @@ import { seoEntry } from "@/lib/meta";
 //   BreadcrumbList;  /teams/<slug> Person + BreadcrumbList;  /courses, /blogs, /teams CollectionPage;
 //   /contact ContactPage;  /faq nothing until every answer is server-rendered (see the mirror README);
 //   /become-mentor and /404 nothing, deliberately.
-// The FAQ builder may emit FAQPage itself once all 8 answers are in the served HTML (they will be in ours).
+// FAQPage: ours server-renders all 8 answers, so the lead can emit it once the FAQ builder exports the Q&A as
+// FAQ_ITEMS from src/components/faq/faqData.ts. Builders never add JSON-LD themselves.
 export function JsonLd({ path }: { path: string }) {
   const e = seoEntry(path);
   if (!e?.jsonld.length) return null;
