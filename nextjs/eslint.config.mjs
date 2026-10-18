@@ -4,7 +4,7 @@ import nextTs from "eslint-config-next/typescript";
 const config = [
   ...nextVitals,
   ...nextTs,
-  { ignores: [".next/**", "node_modules/**", "next-env.d.ts", "qa/**"] },
+  { ignores: [".next/**", ".next-build/**", "node_modules/**", "next-env.d.ts", "qa/**"] },
   { rules: { "@next/next/no-img-element": "off" } },
 ];
 
