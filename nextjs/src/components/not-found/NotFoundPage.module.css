@@ -1,0 +1,122 @@
+/* /404 "Hero Section" (framer-gDIrl: 4rzq6i / 1ywvtbw / 1ttk7u9 / rqbqp8). */
+.hero {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 305px 30px 220px;
+  overflow: hidden;
+  background-color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, #fff);
+}
+.container {
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 1px;
+  max-width: 1300px;
+  height: min-content;
+  padding: 0;
+}
+.content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+  width: 1px;
+  height: min-content;
+  padding: 0;
+}
+.wrap {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+}
+.rt {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.code {
+  margin: 0;
+  font-family: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
+  font-feature-settings: "blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;
+  font-size: 350px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.76em;
+  text-align: center;
+  color: var(--token-6b7381ba-6de4-49e1-a897-8666d0895cc7, #cf7527);
+}
+.wrap .text {
+  text-align: center;
+  color: var(--token-c7693201-4213-426e-a6de-0fbb44d0f402, #444);
+}
+.button {
+  position: relative;
+  flex: none;
+  width: auto;
+  height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .hero {
+    padding: 150px 30px 40px;
+  }
+  .content {
+    gap: 50px;
+  }
+  .wrap {
+    gap: 25px;
+  }
+  .code {
+    font-size: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 140px 20px 30px;
+  }
+  .content {
+    gap: 40px;
+  }
+  .wrap {
+    gap: 20px;
+  }
+  .code {
+    font-size: 40px;
+  }
+}
