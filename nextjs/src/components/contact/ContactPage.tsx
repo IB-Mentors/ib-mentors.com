@@ -8,9 +8,9 @@ import s from "./ContactPage.module.css";
 /**
  * Route /contact. Framer page module iVuZwDpI*.mjs (framer-uTihQ).
  *   Hero Section: title, two-line intro, two images (the first mirrored, rotateY 180deg); appear y 50, hero spring.
- *   Contact Card Section: LINE card (whole card links to LINE, with Framer's nested https://line.me link inside),
- *     email card, hours card. Every href is Framer's, verbatim, including the template's "mailto: ..." placeholders
- *     behind the opening-hours lines. Appear y 60, tween 0.4 s.
+ *   Contact Card Section: LINE card (whole card and its nested link go to LINE_URL), email card, hours card.
+ *     Framer's template leftovers were fixed on 19 Oct 2026: the nested link pointed at the bare https://line.me and
+ *     the opening-hours lines were wrapped in placeholder mailto links (now plain text). Appear y 60, tween 0.4 s.
  *   Contact Section: the shared contact block with the form.
  */
 export function ContactPage() {
@@ -53,7 +53,7 @@ export function ContactPage() {
                     <div className={s.mailWrapper} data-framer-name="Mail Wrapper 01">
                       <div className={s.text} data-framer-name="Text">
                         <p className={`p-1ijstdn ${s.center}`} dir="auto">
-                          <NestedLink href="https://line.me" target="_blank" className={`p-1ajtkdr ${s.link}`}>
+                          <NestedLink href={LINE_URL} target="_blank" className={`p-1ajtkdr ${s.link}`}>
                             LINEにて無料相談を受け付けています。まずはお気軽にメッセージをお送りください。
                           </NestedLink>
                         </p>
@@ -108,18 +108,18 @@ export function ContactPage() {
                     <div className={s.mailWrapper} data-framer-name="Mail Wrapper 01">
                       <div className={s.text} data-framer-name="Text">
                         <p className={`p-1ijstdn ${s.center} ${s.muted}`} dir="auto">
-                          <a className={`p-6bdd8r ${s.link}`} href="mailto: info@elearn-design.com" target="_blank" rel="">
+                          <span className="p-6bdd8r">
                             毎日：7:00 〜 22:00（日本時間）
-                          </a>
+                          </span>
                         </p>
                       </div>
                     </div>
                     <div className={`${s.mailWrapper} ${s.mailWrapper2}`} data-framer-name="Mail Wrapper 02">
                       <div className={s.text} data-framer-name="Text">
                         <p className={`p-1ijstdn ${s.center} ${s.muted}`} dir="auto">
-                          <a className={`p-6bdd8r ${s.link}`} href="mailto: jobs.elearn@mail.com" target="_blank" rel="">
+                          <span className="p-6bdd8r">
                             土・日・祝：対応可
-                          </a>
+                          </span>
                         </p>
                       </div>
                     </div>

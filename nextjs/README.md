@@ -146,8 +146,10 @@ every Framer sitemap URL exists, no console errors; head tags identical to produ
   two V2 instances; `src/components/courses/GoBackButton.tsx`, label "Go Back"); both are verified against their pages,
   so they were not merged.
 - Copy is verbatim, including the Framer source's known issues (repo-root README "Known issues in the Framer source":
-  the footer `mailto: info@elearning.com`, the crossed LINE/Instagram links, the corrupted characters in some posts,
-  the template options in the /become-mentor selects).
+  the corrupted characters in some posts, the template options in the /become-mentor selects). Template links fixed on
+  19 Oct 2026: the footer email (was `mailto: info@elearning.com`, now info@ib-mentors.com), the footer LINE link (was
+  instagram.com), the footer "Instagram" entry (had no link or account, removed), and on /contact the nested line.me
+  link (now the LINE account) and the opening-hours lines (were placeholder mailto links, now plain text).
 
 ## Going live
 

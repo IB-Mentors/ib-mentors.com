@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Appear } from "@/components/ui/Appear";
+import { EMAIL_INFO, LINE_URL } from "@/lib/site";
 import { FooterDate } from "./FooterDate";
 import s from "./Footer.module.css";
 
@@ -7,8 +8,9 @@ import s from "./Footer.module.css";
  * Framer "Footer Section" > component "Footer" (qa/framer-src/script_main.*.mjs: `Footer` framer-tfvoD, `Footer pages
  * Link`, `Footer Social Link`, `Footer Button`, `Time & Date`). The Desktop / Tablet / Phone variants share one DOM
  * here; their differences are media queries in Footer.module.css (Framer: framer-v-5ddg99 / 18wk9xl / yrxn6u).
- * Copy verbatim, including the template's placeholder `mailto: info@elearning.com`, the LINE label pointing at
- * instagram.com, the Instagram label with no link and 会社概要 resolving to "/" (repo README "Known issues").
+ * Copy verbatim from Framer, except three template leftovers fixed on 19 Oct 2026: the email links pointed at the
+ * placeholder `mailto: info@elearning.com` (now EMAIL_INFO), the LINE link pointed at instagram.com (now LINE_URL),
+ * and an "Instagram" entry had no link and no account behind it (removed). 会社概要 still resolves to "/".
  * Motion: "Content" rises 50px (spring stiffness 300 / damping 60 / mass 1.2, delay 0.2, once, threshold 0);
  * the two "Image Bg 2" layers rise 10px / 20px (tween 0.4s, threshold 0.5) on desktop only; hover colours (desktop
  * variants only): page and social links to #d88034 (tween 0.3s), the contact button to #cf7527 (spring 0.4s).
@@ -73,7 +75,7 @@ export function Footer() {
                     <div className={s.emailLoc} data-framer-name="Email & Location">
                       <div className={`${s.full} ${s.rt}`} data-framer-name="Email">
                         <p className="p-1ijstdn" dir="auto" style={{ color: "var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, rgb(255, 255, 255))" }}>
-                          <a className={`p-id40al ${s.lnk}`} href="mailto: info@elearning.com" target="_blank">
+                          <a className={`p-id40al ${s.lnk}`} href={`mailto:${EMAIL_INFO}`} target="_blank">
                             info@ib-mentors.com
                           </a>
                         </p>
@@ -115,7 +117,7 @@ export function Footer() {
                     </div>
                     <div className={s.linkList} data-framer-name="Links wrapper">
                       <div className={s.socialBox}>
-                        <a className={s.social} data-framer-name="Footer Social Link" href="https://www.instagram.com/" target="_blank">
+                        <a className={s.social} data-framer-name="Footer Social Link" href={LINE_URL} target="_blank">
                           <div className={`${s.pre} ${s.rt}`}>
                             <h5 className="p-1q957ix">LINE</h5>
                           </div>
@@ -126,19 +128,7 @@ export function Footer() {
                           </div>
                         </a>
                       </div>
-                      <div className={s.socialBox}>
-                        <a className={s.social} data-framer-name="Footer Social Link">
-                          <div className={`${s.pre} ${s.rt}`}>
-                            <h5 className="p-1q957ix">Instagram</h5>
-                          </div>
-                          <div className={s.icon24} data-framer-name="Icon">
-                            <div className={s.fill}>
-                              <img alt="Icon" loading="lazy" decoding="async" src={SOCIAL_ICON} className={s.contain} />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                      <a className={s.mail} data-framer-name="Footer Social Link" href="mailto: info@elearning.com" target="_blank">
+                      <a className={s.mail} data-framer-name="Footer Social Link" href={`mailto:${EMAIL_INFO}`} target="_blank">
                         <div className={`${s.pre} ${s.rt}`}>
                           <h5 className="p-1q957ix" dir="auto" style={{ color: "var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, rgb(255, 255, 255))" }}>
                             Email
