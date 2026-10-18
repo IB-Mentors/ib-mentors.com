@@ -1,0 +1,286 @@
+/* Framer form markup shared by /faq, /contact and /become-mentor (FormContainer + FormPlainTextInput / FormSelect).
+   The .wrapper / .textInput / .selectWrapper / .input rules are Framer's own form CSS (framer-form-input-wrapper,
+   framer-form-text-input, framer-form-select-wrapper, framer-form-input), driven by the --framer-input-* variables
+   each page sets on its inputs. Page differences are keyed on [data-v]. */
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.info {
+  display: grid;
+  flex: none;
+  gap: 30px;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(1, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, min-content);
+  justify-content: center;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.label {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: start;
+  justify-self: start;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.caption {
+  flex: none;
+  width: auto;
+  height: auto;
+  position: relative;
+  white-space: pre;
+}
+.captionText {
+  color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+}
+.inputIcon {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+  overflow: clip;
+}
+.icon {
+  flex: none;
+  position: absolute;
+  left: 24px;
+  height: 13px;
+  overflow: hidden;
+  z-index: 1;
+  will-change: filter;
+}
+.iconImg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.center {
+  top: 49%;
+  transform: translateY(-50%);
+}
+.faqEmail {
+  top: calc(49.18032786885248% - 6.5px);
+}
+.faqMessage {
+  top: calc(16.111111111111136% - 6.5px);
+}
+.top24 {
+  top: 24px;
+}
+
+/* --framer-input-* values (FAQ / contact defaults). */
+.wrapper {
+  --framer-input-background: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, #fff);
+  --framer-input-border-radius: 40px;
+  --framer-input-focused-border-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+  --framer-input-font-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+  --framer-input-padding: 20px 24px 20px 48px;
+  --framer-input-placeholder-color: var(--token-cc3fc405-587e-4aef-89f9-b1d504959e2d, #44444480);
+  --framer-input-icon-color: #999;
+  flex: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: var(--framer-input-background);
+  border-radius: var(--framer-input-border-radius);
+}
+.wrapper::after {
+  content: "";
+  pointer-events: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--framer-input-border-radius);
+  border: 0 solid transparent;
+}
+.wrapper:focus-within::after {
+  border: 1px solid var(--framer-input-focused-border-color);
+}
+.textarea {
+  --framer-input-border-radius: 20px;
+  min-height: 180px;
+}
+.input {
+  font-family: "Instrument Sans";
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: 0em;
+  line-height: 1.3em;
+  text-align: left;
+  color: var(--framer-input-font-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  height: auto;
+  padding: var(--framer-input-padding);
+  background: none;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0;
+}
+.input:focus-visible {
+  outline: none;
+}
+.input::placeholder {
+  color: var(--framer-input-placeholder-color);
+  opacity: 1;
+}
+/* framer-form-text-input */
+.textInput {
+  display: flex;
+  align-items: center;
+  padding: var(--framer-input-padding);
+}
+.textInput .input {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  padding: 0;
+}
+.textarea.textInput {
+  padding: 0;
+}
+.textarea .input {
+  width: 100%;
+  padding: var(--framer-input-padding);
+  resize: vertical;
+  min-height: inherit;
+  max-height: inherit;
+  white-space: break-spaces;
+  display: flex;
+  overflow-y: auto;
+}
+.textarea .input::-webkit-resizer {
+  background: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2214%22 height=%2214%22><path d=%22m1.5 8 7-7M9 5.5l-3 3%22 stroke=%22%23999%22 stroke-width=%221.5%22 stroke-linecap=%22round%22></path></svg>") no-repeat;
+}
+.textarea .input::-webkit-scrollbar {
+  cursor: pointer;
+  background: 0 0;
+}
+.textarea .input::-webkit-scrollbar-thumb:window-inactive {
+  opacity: 0;
+}
+.textarea .input::-webkit-scrollbar-corner {
+  background: 0 0;
+  outline: none;
+}
+/* framer-form-select-wrapper */
+.selectWrapper {
+  padding: var(--framer-input-padding);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.selectWrapper .input {
+  appearance: none;
+  padding: var(--framer-input-padding);
+  background: none;
+}
+.selectWrapper .input:required:invalid {
+  color: var(--framer-input-invalid-text-color);
+}
+.selectWrapper .input option {
+  color: #000;
+}
+.selectWrapper .input option:disabled {
+  color: #0006;
+}
+.selectWrapper::before {
+  content: "";
+  box-sizing: content-box;
+  width: 16px;
+  padding: var(--framer-input-padding);
+  padding-left: 10px;
+  pointer-events: none;
+  background-color: var(--framer-input-icon-color);
+  mask-position: 10px;
+  mask-size: 16px;
+  mask-repeat: no-repeat;
+  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M 3.5 6 L 8 10.5 L 12.5 6" fill="transparent" stroke-width="1.5" stroke="rgb(153, 153, 153)" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
+  border: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.button {
+  flex: none;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+/* /become-mentor input values (framer-UQMLZ). */
+.form[data-v="become-mentor"] .wrapper {
+  --framer-input-padding: 23px 24px 25px 48px;
+  --framer-input-placeholder-color: var(--token-c7693201-4213-426e-a6de-0fbb44d0f402, #444);
+}
+.form[data-v="become-mentor"] .selectWrapper {
+  --framer-input-padding: 23px 24px 25px 24px;
+  --framer-input-icon-color: var(--token-6b7381ba-6de4-49e1-a897-8666d0895cc7, #cf7527);
+  --framer-input-invalid-text-color: var(--token-c7693201-4213-426e-a6de-0fbb44d0f402, #444);
+}
+
+@media (max-width: 767.98px) {
+  .form {
+    gap: 25px;
+  }
+  .info {
+    gap: 20px;
+  }
+  .caption {
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .wrapper,
+  .form[data-v="become-mentor"] .wrapper {
+    --framer-input-padding: 20px 20px 20px 48px;
+  }
+  .form[data-v="become-mentor"] .selectWrapper {
+    --framer-input-padding: 20px 20px 20px 24px;
+  }
+  /* Framer keeps the caption of the two become-mentor selects on one line ("Subject" layers have no phone override). */
+  .form[data-v="become-mentor"] .caption[data-framer-name="Subject"] {
+    white-space: pre;
+    width: auto;
+  }
+}

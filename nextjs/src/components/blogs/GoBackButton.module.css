@@ -1,0 +1,125 @@
+/* Framer "Go Back Button" (framer-ZANNJ). Base V1 = framer-v-cbgo6, V2 = framer-v-1djapy3. */
+.btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: min-content;
+  height: min-content;
+  padding: 10px 26px 10px 10px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114, #0a226b);
+  border-radius: 40px;
+  will-change: transform;
+}
+.iconWrapper {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, #fff);
+  border-radius: 100px;
+  will-change: transform;
+}
+.icon {
+  flex: none;
+  width: 14px;
+  height: 13px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+/* Framer: right -50px, top 50%, translateY(-50%) -> sits 60px right of the centred spot. */
+.iconIn {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  z-index: 1;
+  transform: translate(60px, -50%);
+}
+.iconOut {
+  position: relative;
+  transform: translateX(0);
+}
+.titleWrapper {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  width: min-content;
+  height: min-content;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.title {
+  flex: none;
+  width: auto;
+  height: auto;
+  white-space: pre;
+  transition: transform 0.4s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.title p {
+  color: var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9, #fff);
+}
+/* Framer: top -70px, left 50%, translateX(-50%). */
+.titleIn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transform: translateY(-70px);
+}
+.titleOut {
+  position: relative;
+  transform: translate(0, 0);
+}
+
+/* Hover (desktop V1 only): left 49% / bottom -70px for the outgoing label, left -50px for the outgoing icon. */
+@media (min-width: 1380px) {
+  .btn:hover .iconIn {
+    transform: translate(0, -50%);
+  }
+  .btn:hover .iconOut {
+    transform: translateX(-60px);
+  }
+  .btn:hover .titleIn {
+    transform: translateY(0);
+  }
+  .btn:hover .titleOut {
+    transform: translate(-1%, 70px);
+  }
+}
+
+/* "Go Back Button V2" on tablet and phone. */
+@media (max-width: 1379.98px) {
+  .btn {
+    cursor: unset;
+  }
+  .iconIn,
+  .titleIn {
+    display: none;
+  }
+}

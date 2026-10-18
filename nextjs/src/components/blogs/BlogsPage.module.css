@@ -1,0 +1,252 @@
+/* /blogs, Framer page framer-FFyje (yMu5HGDW*.mjs). */
+.hero {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 204px 30px 60px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.container {
+  display: flex;
+  flex: 1 0 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 1px;
+  max-width: 1300px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.heroContent {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.titleWrapper {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 555px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.richText {
+  flex: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.center {
+  text-align: center;
+}
+.imageWrapper {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 960px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.image1,
+.image2 {
+  flex: none;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  will-change: transform;
+}
+.image1 {
+  aspect-ratio: 1.7142857142857142 / 1;
+  width: 600px;
+}
+.image2 {
+  aspect-ratio: 1 / 1;
+  width: 350px;
+}
+.img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blogs {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: min-content;
+  padding: 60px 30px 120px;
+  position: relative;
+  overflow: hidden;
+}
+.container2 {
+  display: flex;
+  flex: 1 0 0px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 1px;
+  max-width: 1300px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.blogsContent {
+  display: flex;
+  flex: 1 0 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+  width: 1px;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.cardWrapper {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+  position: relative;
+}
+.grid {
+  display: grid;
+  flex: none;
+  gap: 30px;
+  grid-auto-rows: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  justify-content: center;
+  width: 100%;
+  height: min-content;
+  padding: 0 0 100px;
+  position: relative;
+}
+.cardContainer {
+  align-self: start;
+  justify-self: start;
+  flex: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.loadMore {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  flex: none;
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .hideWide {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .hero {
+    padding: 150px 30px 40px;
+  }
+  .heroContent,
+  .blogsContent {
+    gap: 50px;
+  }
+  .titleWrapper {
+    gap: 25px;
+  }
+  .imageWrapper {
+    max-width: unset;
+  }
+  .image1 {
+    width: 62%;
+  }
+  .image2 {
+    width: 36%;
+  }
+  .blogs {
+    padding: 40px 30px 80px;
+  }
+  .grid {
+    padding: 0 0 90px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 140px 20px 30px;
+  }
+  .heroContent,
+  .blogsContent {
+    gap: 40px;
+  }
+  .imageWrapper {
+    flex-direction: column;
+    gap: 20px;
+    max-width: unset;
+  }
+  .image1 {
+    width: 100%;
+  }
+  .image2 {
+    aspect-ratio: 1.7156862745098038 / 1;
+    width: 100%;
+  }
+  .blogs {
+    padding: 30px 20px 60px;
+  }
+  .grid {
+    gap: 40px;
+    grid-template-columns: repeat(1, minmax(50px, 1fr));
+    padding: 0 0 80px;
+  }
+  .hidePhoneCard {
+    display: none;
+  }
+}
