@@ -1,0 +1,14 @@
+node_modules
+.next
+.next-build
+out
+*.tsbuildinfo
+next-env.d.ts
+.env*
+.vercel
+# Parity reference material, regenerated locally (qa/fetch-page.sh, qa/gen.py, qa/dump.mjs)
+qa/out/
+qa/framer/
+qa/framer-src/
+qa/ref/
+qa/scratch-*

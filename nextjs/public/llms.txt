@@ -1,0 +1,45 @@
+# IBメンター (IB Mentors)
+
+> IBディプロマ（DP）を修了したメンターが、学習計画の設計からIA・EE・TOK対策、科目別の試験対策までを完全オンラインで伴走する、日本語のIB専門サポートサービスです。運営は東京都世田谷区。問い合わせと無料相談はLINEまたはフォームから受け付けています。
+
+An online International Baccalaureate mentoring service for students in Japan,
+delivered in Japanese by mentors who completed the IB Diploma themselves.
+Support covers study planning, IA, EE, TOK and subject exam preparation.
+
+- 連絡先 / Contact: support@ib-mentors.com
+- 無料相談 / Free consultation: https://ib-mentors.com/contact
+
+
+## メインページ / Main pages
+
+- [IBメンター | IBを勝ち抜くためのオンラインサービス](https://ib-mentors.com/): IBメンターは、IBディプロマを実際に勝ち抜いた先輩が専属メンターとして伴走する完全オンラインサポートです。学習計画の設計からIA・EE・TOK対策、科目別の試験対策までまとめて支えます。まずは無料相談から。
+- [コース・プラン一覧 | IBメンター](https://ib-mentors.com/courses): 週次の専属メンタリング、学習計画設計、EE完全サポート、IA科目別サポートまで、IBメンターのコースと料金を一覧でご確認いただけます。目的に合うプランは無料相談で一緒に選べます。
+- [ブログ・お役立ち情報 | IBメンター](https://ib-mentors.com/blogs): EEのテーマ選び、TOKエッセイ、IAの仕上げ方、Math AAとAIの選択、試験直前の対策まで、IBを修了したメンターが書いた実践的な記事をまとめています。
+- [メンター紹介 | IBメンター](https://ib-mentors.com/teams): IBディプロマを修了し海外大学へ進学したメンターをご紹介します。得意科目、出身校、指導方針から、お子さまに合う一人を選んでいただけます。
+- [よくあるご質問 | IBメンター](https://ib-mentors.com/faq): サービス内容、対応科目とコンポーネント、メンターの経歴、オンライン指導の進め方、料金とお申し込みまで、IBメンターによく寄せられるご質問にお答えします。
+- [お問い合わせ | IBメンター](https://ib-mentors.com/contact): IBメンターへのお問い合わせ窓口です。LINEまたはフォームから、無料相談のご予約や受講に関するご質問をお気軽にお送りください。
+- [メンター募集 | IBメンター](https://ib-mentors.com/become-mentor): IBメンターではIBディプロマ修了生のメンターを募集しています。得意科目と指導可能な時間をフォームにご記入のうえ、ご応募ください。
+
+## コース / Courses
+
+- [EE（課題論文）一貫サポート | IBメンター コース](https://ib-mentors.com/courses/ee-extended-essay-full-support): テーマ選定から論文構成・校正・提出までEEの全プロセスを一貫サポート。最高得点取得のために実際に同じ科目でEEを書いた経験のあるメンターが伴走します。
+- [IA一貫サポート | IBメンター コース](https://ib-mentors.com/courses/ia-subject-complete): 数学・理科・文科を問わず、IAのリサーチクエスチョン設定から完成提出まで一貫サポート。実際に同じ科目履修経験のあるメンターによる伴走。
+- [スタディプラン設計（初回診断） | IBメンター コース](https://ib-mentors.com/courses/ib-study-plan-design): IB全体の現状を導入面談で整理し、ゴール逆算のスタディプランを策定。まずここから始めたい方のエントリープラン。IB-Mentorsへの最初の一歩に最適なプランです。
+- [IB専属メンタリング（週次伴走） | IBメンター コース](https://ib-mentors.com/courses/ib-weekly-mentoring): 計画→実行→振り返りまで、毎週の伴走で総合点を着実に伸ばすIB-Mentorsの看板プラン。IB-Mentorsの最もご好評いただいているプランです。
+
+## メンター / Mentors
+
+- [深川瑛翔 講師 | IBメンター](https://ib-mentors.com/teams/e-f): Physics,Math,Japaneseを得意とするIB修了メンター。１年半の間１０人以上の生徒を教えてきた経験を生かして、着実なIB成功へと導きます。
+
+## ブログ / Blog
+
+- [CAS活動の選び方―IB認定を通すための7つのアウトカムを理解する | IBメンター ブログ](https://ib-mentors.com/blogs/cas-katudo-erabi-learning-outcomes): CAS（Creativity, Activity, Service）は、IB修了のために必須の非学術コンポーネントです。単に活動をこなすだけでなく、IBOが定める7つのアウトカム（Learning Outcomes）を満たすことを証明する…
+- [EE（拡大論文）のテーマ選びに失敗しないためのガイド | IBメンター ブログ](https://ib-mentors.com/blogs/ee-theme-erabi-guide): EE（Extended Essay）は4000字の英語論文で、多くのIB生が最初につまずくのが「テーマ選び」です。良いリサーチクエスチョンを設定できるかどうかが、EEの完成度と評価を左右します。
+- [IB学生が知るべき大学出願のリアル―IBスコアを最大限に活かす方法 | IBメンター ブログ](https://ib-mentors.com/blogs/ib-daigaku-shigan-score-katsuyo): IBディプロマは、世界中の大学から高い評価を得る資格です。しかし、同じIBスコアでも、志望校に合正するかどうかは出願戦略で大きく左右されます。
+- [IB保護者の径―お子さまのIB状況を理解し、適切にサポートするための5ステップ | IBメンター ブログ](https://ib-mentors.com/blogs/ib-hogo-sha-support-5steps): IBは特殊な教育システムであるため、保護者の方が「いま何をやっているのか」を正確に把握するのは容易ではありません。この記事では、保護者が実践できる5つのステップをご紹介します。
+- [IBのIA（内部評価）を高得点で完成させるための実践手順 | IBメンター ブログ](https://ib-mentors.com/blogs/ib-ia-kotoken-kansei-tejun): IA（Internal Assessment）は各科目の成績に実質的な影響を与えるコンポーネントです。科目ごとに形式・評価基準が異なりますが、共通するコツと失敗パターンがあります。
+- [IB数学AA vs AI―自分に合った科目選択の考え方 | IBメンター ブログ](https://ib-mentors.com/blogs/ib-math-aa-vs-ai-erabi-kata): IB数学は「Analysis & Approaches（AA）」と「Applications & Interpretation（AI）」の2种類があり、どちらを選択するかにより大学出願や学習負荷が大きく変わります。
+- [IB生のメンタル管理―ストレスと上手に付き合いながらIBを乗り越える方法 | IBメンター ブログ](https://ib-mentors.com/blogs/ib-mental-management-stress): IBディプロマは、学術的な負荷だけでなく、メンタル的な負荷も非常に大きいプログラムです。完異ずつ增える提出物・広範な内容・常に追われる評価基準―これらが重なり、心身ともに迫られるIB生は少なくありません。
+- [IB試験直前の最強対策―残り4週間で得点を最大化する方法 | IBメンター ブログ](https://ib-mentors.com/blogs/ib-shiken-chokuzen-taisaku-4weeks): IB試験は毎年〖5月または11月に行われます。試験直前の4週間の過ごし方が、最終的な得点に大きく左右します。直前期に最も効果的なのはpast paper（過去問題）を時間通りに解き、評価基準で自己採点するのを繰り返すことです。
+- [IBで総合点を上げるための5つの戦略 | IBメンター ブログ](https://ib-mentors.com/blogs/ib-sogo-ten-wo-ageru-senryaku): IBディプロマプログラム（DP）の総合点は、最大で想45点。内訳成績が音を立てない中で、、45点満点」を目指すIB生が増えています。この記事では、総合点を実際に伸ばすための実践的な5つの戦略を解説します。
+- [TOKエッセイでA評価を獲得するためのコツ | IBメンター ブログ](https://ib-mentors.com/blogs/tok-essay-a-hyoka-no-kotsu): TOK（Theory of Knowledge）のエッセイは、IB修了生の多くが苦手意識を持つコンポーネントの一つです。しかし、評価基準を正確に理解した上で構徫することで、A評価は十分稿に届きます。

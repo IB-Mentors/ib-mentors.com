@@ -1,0 +1,65 @@
+/* Framer text presets (qa/gen.py). Class .p-<id> == Framer .framer-styles-preset-<id>, tablet/phone overrides included.
+ * Link presets (selector applies to <a>) carry --link-text-color / --link-hover-text-color vars: use them in your module CSS. */
+/* Summary (desktop):
+ * .p-1ajtkdr (link):   /  / lh  / ls  / none
+ * .p-1da19g0: "Instrument Sans" 80px / 400 / lh 1.2em / ls -.02em / none
+ * .p-1goqrxy: "Instrument Sans" 27px / 400 / lh 1.2em / ls 0em / none
+ * .p-1ijstdn: "Instrument Sans" 16px / 400 / lh 1.7em / ls 0em / none
+ * .p-1ktddze: "Instrument Sans" 48px / 400 / lh 1.2em / ls 0em / none
+ * .p-1magne6: "Instrument Sans" 16px / 400 / lh 1.7em / ls 0em / none
+ * .p-1q957ix: "Instrument Sans" 25px / 400 / lh 1.2em / ls 0em / none
+ * .p-1qag7qz: "Instrument Sans" 14px / 400 / lh 1.2em / ls 0em / none
+ * .p-5bbaju: "Instrument Sans" 20px / 600 / lh 1.2em / ls -.02em / none
+ * .p-5wiz97 (link):   /  / lh  / ls  / none
+ * .p-6bdd8r (link):   /  / lh  / ls  / none
+ * .p-fq3lch (link):   /  / lh  / ls  / none
+ * .p-id40al (link):   /  / lh  / ls  / none
+ * .p-qapw0k: "Instrument Sans" 40px / 400 / lh 1.2em / ls 0em / none
+ * .p-vft582: "Instrument Sans" 16px / 400 / lh 1.2em / ls 0em / none
+ * .p-w4t77b: "Instrument Sans" 16px / 600 / lh 1.2em / ls 0em / none
+ * .p-ztkeh: "Instrument Sans" 20px / 400 / lh 1.2em / ls -.02em / none
+ */
+.p-1ajtkdr{--link-text-color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#444);--link-hover-text-color:var(--token-17474546-f0fd-442e-bce5-7d0f3321f71d,#d88034)}
+.p-1da19g0{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:80px;font-weight:400;letter-spacing:-.02em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .p-1da19g0{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:59px;font-weight:400;letter-spacing:-.02em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+@media (max-width: 767.98px) {
+  .p-1da19g0{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:39px;font-weight:400;letter-spacing:-.02em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+.p-1goqrxy{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:27px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .p-1goqrxy{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:28px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+@media (max-width: 767.98px) {
+  .p-1goqrxy{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:24px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+.p-1ijstdn{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:16px;font-weight:400;letter-spacing:0em;line-height:1.7em;color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#555);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+.p-1ktddze{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:48px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .p-1ktddze{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:40px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+@media (max-width: 767.98px) {
+  .p-1ktddze{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:36px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+.p-1magne6{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:16px;font-weight:400;letter-spacing:0em;line-height:1.7em;color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#555);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:20px}
+.p-1q957ix{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:25px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+@media (max-width: 1379.98px) {
+  .p-1q957ix{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:20px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+.p-1qag7qz{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:14px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#555);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:20px}
+.p-5bbaju{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:20px;font-weight:600;letter-spacing:-.02em;line-height:1.2em;color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#555);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:20px}
+.p-5wiz97{--link-text-color:var(--token-c7ef8dad-d4d1-4208-9575-8a58edab351f,#f4f1ea);--link-hover-text-color:var(--token-17474546-f0fd-442e-bce5-7d0f3321f71d,#d88034)}
+.p-6bdd8r{--link-text-color:var(--token-e29f80cc-7c19-42a6-a7c7-b923c17868bb,#ffffffb3);--link-hover-text-color:var(--token-17474546-f0fd-442e-bce5-7d0f3321f71d,#d88034)}
+.p-fq3lch{--link-text-color:var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9,#fff);--link-hover-text-color:var(--token-e29f80cc-7c19-42a6-a7c7-b923c17868bb,#ffffffb3)}
+.p-id40al{--link-text-color:var(--token-7815bd49-9bc8-4647-bba4-8c93a9b00cc9,#fff);--link-hover-text-color:var(--token-17474546-f0fd-442e-bce5-7d0f3321f71d,#d88034)}
+.p-qapw0k{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:40px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+@media (min-width: 768px) and (max-width: 1379.98px) {
+  .p-qapw0k{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:32px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+@media (max-width: 767.98px) {
+  .p-qapw0k{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:28px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-080e1a25-cec7-42ff-8f40-b5b92f071114,#1a453c);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+}
+.p-vft582{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:16px;font-weight:400;letter-spacing:0em;line-height:1.2em;color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#555);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+.p-w4t77b{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:16px;font-weight:600;letter-spacing:0em;line-height:1.2em;color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#555);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}
+.p-ztkeh{font-family:"Instrument Sans", "Instrument Sans Placeholder", sans-serif;font-size:20px;font-weight:400;letter-spacing:-.02em;line-height:1.2em;color:var(--token-c7693201-4213-426e-a6de-0fbb44d0f402,#555);font-feature-settings:"blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;text-transform:none;text-decoration:none;font-style:normal;text-align:left;--paragraph-spacing:0px}

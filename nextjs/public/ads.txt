@@ -1,0 +1,5 @@
+# Authorized Digital Sellers for ib-mentors.com
+# https://iabtechlab.com/ads-txt/
+#
+# Google AdSense, Kelin Studio publisher account.
+google.com, pub-8631844190242419, DIRECT, f08c47fec0942fa0
